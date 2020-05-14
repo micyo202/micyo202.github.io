@@ -190,10 +190,10 @@
 <h2 id="五、开发说明"><a href="#五、开发说明" class="headerlink" title="五、开发说明"></a>五、开发说明</h2><p>开发详细编码可参考 <em>lion-demo</em> 示例模块</p>
 <h3 id="代码生成"><a href="#代码生成" class="headerlink" title="代码生成"></a>代码生成</h3><p>创建好业务数据表，执行模块根路径下CodeGenerator类，程序会根据数据库表结构生成对应的entity、mapper、service及controller相关代码，在此基础上进行业务开发</p>
 <p>一般对象返回结果用 <em>Result</em> 统一处理</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Object&gt; objects = baseService.listObjs();</span><br><span class="line"><span class="keyword">return</span> Result.success(objects);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Object&gt; objects = baseService.list();</span><br><span class="line"><span class="keyword">return</span> Result.success(objects);</span><br></pre></td></tr></table></figure>
 
 <p>分页对象返回结果需用 <em>ResultPage</em> 统一处理</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PageInfo pageInfo = baseService.selectAllByPage(pageNum, pageSize);</span><br><span class="line"><span class="keyword">return</span> ResultPage.success(pageInfo);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PageInfo pageInfo = baseService.page(pageNum, pageSize);</span><br><span class="line"><span class="keyword">return</span> ResultPage.success(pageInfo);</span><br></pre></td></tr></table></figure>
       
 
       
